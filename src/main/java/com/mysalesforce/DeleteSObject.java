@@ -9,7 +9,7 @@ import org.salesforce.Util;
 public class DeleteSObject {
     public static void main( String[] args ){
         Util util = new Util();
-        SObject sObject = new SObject("Account",util.getBaseUrl());
+        SObject sObject = new SObject("Account",util);
         String objectId = "0012800000DR2Ko";
         sObject.deleteSObject(objectId);
     }

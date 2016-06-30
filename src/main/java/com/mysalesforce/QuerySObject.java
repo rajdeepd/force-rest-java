@@ -10,7 +10,7 @@ import org.salesforce.*;
 public class QuerySObject {
     public static void main( String[] args ) {
         org.salesforce.Util util = new org.salesforce.Util();
-        SObject sObject = new SObject("Account",util.getBaseUrl());
+        SObject sObject = new SObject("Account",util);
         String soql  = "SELECT+name+from+Account";
         String response = sObject.executeSOQL(soql);
         JSONObject obj = new JSONObject(response);

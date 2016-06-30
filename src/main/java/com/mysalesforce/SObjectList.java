@@ -13,7 +13,7 @@ public class SObjectList
     public static void main( String[] args )
     {
         Util util = new Util();
-        SObject sObject = new SObject("Account",util.getBaseUrl());
+        SObject sObject = new SObject("Account",util);
         String body = sObject.getList();
         System.out.println(body);
         JSONObject obj = new JSONObject(body);
